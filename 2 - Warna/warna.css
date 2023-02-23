@@ -1,0 +1,17 @@
+h1 {
+    background-color: black;
+    color: gold;
+}
+
+p {
+    background-color: brown;
+    color: lightskyblue;
+}
+
+label {
+    color: darkgreen;
+}
+
+textarea {
+    color: blueviolet;
+}

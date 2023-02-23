@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Menggunakan Flexbox</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eee;
+            line-height: 1.65;
+            padding-bottom: 1000px;
+        }
+
+        /* Latihan 1 */
+        .container-satu {
+            width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .kolom-utama {
+            margin-right: 20px;
+            flex: 3;
+            order: 2;
+        }
+
+        .sidebar-satu {
+            flex: 1;
+            order: 1;
+        }
+
+        .sidebar-dua {
+            flex: 1;
+            order: 3;
+        }
+
+        /* Latihan 2 */
+        .container-dua {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .layanan {
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .layanan.satu {
+            background-color: rgb(119, 119, 255);
+        }
+
+        .layanan.dua {
+            background-color: rgb(106, 216, 103);
+        }
+
+        .layanan.tiga {
+            background-color: rgb(255, 124, 124);
+        }
+
+        /* Latihan 3 */
+        .container-tiga {
+            max-width: 800px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .thumbnail {
+            width: 50%;
+        }
+
+        .thumbnail img {
+            width: 100%;
+        }
+
+        /* Latihan 4 */
+        .container-empat {
+            max-width: 800px;
+            margin: 50px auto;
+            display: flex;
+        }
+
+        .card {
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            background-color: white;
+            overflow: hidden;
+            margin: 10px;
+            flex: 1;
+        }
+
+        .card .header {
+            height: 150px;
+            background-color: #666;
+        }
+
+        .card .content {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .card.besar {
+            transform: scale(1.1);
+        }
+
+        /* Latihan 5 */
+        .container-lima {
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            border: 5px solid black;
+            display: flex;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            color: black;
+            text-align: center;
+            margin: auto;
+            display: flex;
+        }
+
+        .kotak span {
+            margin: auto;
+        }
+
+
+
+        /* Responsive */
+        @media( min-width: 600px ) {
+
+            .container-dua {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .layanan {
+                width: 30%;
+            }
+
+            .thumbnail {
+                width: 30%;
+            }
+
+            .card {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Latihan 1 - Kolom -->
+    <div class="container-satu">
+        <div class="kolom-utama">
+            <h2>Judul Artikel</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, labore excepturi expedita accusamus accusantium enim! Mollitia iusto tenetur voluptatem sit.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, magni recusandae asperiores, dolores quasi obcaecati odio ducimus ratione sunt aspernatur tempore nobis quas voluptatum dicta consequuntur, praesentium est. Harum, excepturi repudiandae aliquid doloremque deserunt debitis inventore ratione laboriosam cum itaque!</p>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum impedit voluptate placeat, excepturi, itaque dicta rem eveniet perferendis, cum quae ea a delectus quaerat porro? Dicta obcaecati nam voluptatem doloribus.</p>
+
+        </div>
+        <div class="sidebar-satu">
+            <h3>Sidebar Satu</h3>
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>
+                <li><a href="">Link 5</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-dua">
+            <h3>Sidebar Dua</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates provident minima in non quisquam ut.</p>
+        </div>
+    </div>
+    <!-- Akhir Latihan 1 -->
+
+    <!-- Latihan 2 - Services / Features -->
+    <div class="container-dua">
+        <div class="layanan satu">
+            <h4>Layanan 1</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, velit.</p>
+        </div>
+        <div class="layanan dua">
+            <h4>Layanan 2</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et saepe eius debitis fuga consectetur repellat!</p>
+        </div>
+        <div class="layanan tiga">
+            <h4>Layanan 3</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat non earum magni voluptates reprehenderit dolor.</p>
+        </div>
+    </div>
+    <!-- Akhir Latihan 2 -->
+
+    <!-- Latihan 3 - Gallery -->
+    <div class="container-tiga">
+        <div class="thumbnail">
+            <img src="img/1.png" alt="">
+            <div class="caption"></div>
+        </div>
+        <div class="thumbnail">
+            <img src="img/2.png" alt="">
+            <div class="caption"></div>
+        </div>
+        <div class="thumbnail">
+            <img src="img/3.png" alt="">
+            <div class="caption"></div>
+        </div>
+        <div class="thumbnail">
+            <img src="img/4.png" alt="">
+            <div class="caption"></div>
+        </div>
+        <div class="thumbnail">
+            <img src="img/5.png" alt="">
+            <div class="caption"></div>
+        </div>
+        <div class="thumbnail">
+            <img src="img/6.png" alt="">
+            <div class="caption"></div>
+        </div>
+    </div>
+    <!-- Akhir Latihan 3 -->
+
+    <!-- Latihan 4 Card -->
+    <div class="container-empat">
+        <div class="card">
+            <div class="header"></div>
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, ratione!</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card besar">
+            <div class="header"></div>
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, ratione!</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header"></div>
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, ratione!</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Latiha 4 -->
+
+    <!-- Latihan 5 - Centering -->
+    <div class="container-lima">
+        <div class="kotak"><span>Hello World Ali Havizni!</span></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+
+        body {
+            font-family:Arial, Helvetica, sans-serif
+        }
+
+        h1 {
+            color: salmon;
+            text-align: center;
+            font-size: 6em;
+        }
+
+        nav {
+            font-size: 1.5em;
+        }
+
+        ul, li {
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* @media (width: 500px) {
+            h1 {
+                color: lightskyblue;
+            }
+        } */
+
+        @media screen and (min-width: 500px) {
+            h1 {
+                color: gold;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            h1 {
+                color: lime;
+            }
+        }
+
+        @media screen and (min-width: 900px) and (max-width: 1000px){
+            h1 {
+                color: lightskyblue;
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            body {
+                background-color: orchid;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Profile</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+        </ul>
+        
+        <a href="#">Register</a>
+
+    </nav>
+
+    <h1>Media Query</h1>
+
+</body>
+</html>

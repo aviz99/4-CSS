@@ -1,0 +1,9 @@
+h1 {
+    background-color: salmon;
+}
+
+span {
+    width: 300px;
+    background-color: lightskyblue;
+    display: inline-block;
+}

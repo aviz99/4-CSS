@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+
+.white h2:hover {
+    background-color: blue;
+    color: white;
+}
+
+.red-one h2::first-letter {
+    font-size: xx-large;
+}

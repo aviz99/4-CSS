@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 800px;
+            margin: auto;
+            border: 2px solid black;
+        }
+
+        .kotak1 {
+            transition: all 1s ease;
+            background-color: royalblue;
+        }
+
+        .kotak2 {
+            transition: all 1s ease-in;
+            background-color: gold;
+        }
+
+        .kotak3 {
+            transition: all 1s ease-out;
+            background-color: lime;
+        }
+
+        .kotak4 {
+            transition: all 1s ease-in-out;
+            background-color: salmon;
+        }
+
+        .kotak5 {
+            transition: all 1s steps(4, jump-start);
+            background-color: magenta;
+        }
+
+        .kotak6 {
+            transition: all 1s linear;
+            background-color: red;
+        }
+
+        .kotak7 {
+            transition: all 1s cubic-bezier(0, 0, 0.65,-0.17);
+            background-color: aqua;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            margin: 5px 0;
+        }
+
+        .container:hover .kotak {
+            transform: rotate(720deg);
+            margin-left: 700px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kotak kotak1">ease</div>
+        <div class="kotak kotak2">ease-in</div>
+        <div class="kotak kotak3">ease-out</div>
+        <div class="kotak kotak4">ease-in-out</div>
+        <div class="kotak kotak5">jump-start</div>
+        <div class="kotak kotak6">linear</div>
+        <div class="kotak kotak7">cubic-bezier</div>
+    </div>
+
+
+</body>
+</html>
